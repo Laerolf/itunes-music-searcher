@@ -1,0 +1,14 @@
+<div class="container">
+  <h3 *ngIf="hasSearchResults && !loading">{{ searchResultsMessage }}</h3>
+  <h3 *ngIf="!hasSearchResults && hasSearchKey && !loading">Nothing found for '{{ searchKey }}'</h3>
+  <h3 *ngIf="!hasSearchKey">Please type a filter...</h3>
+  <h3 *ngIf="loading">Searching for '{{ searchKey }}'...</h3>
+
+  <div class="search-results-container" *ngIf="hasSearchResults && !loading">
+    <app-search-results-item
+      *ngFor="let song of searchResults; index as resultIndex; trackBy: trackSong"
+      [song]="song">
+    </app-search-results-item>
+  </div>
+
+</div>

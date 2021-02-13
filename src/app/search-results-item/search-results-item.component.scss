@@ -1,0 +1,8 @@
+.search-result-item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr 1fr;
+  column-gap: 0.5rem;
+  align-items: center;
+  border: gray solid 0.1rem;
+  padding: 1rem;
+}

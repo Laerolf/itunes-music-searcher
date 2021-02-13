@@ -1,0 +1,19 @@
+<div class="search-result-item-container">
+  <div class="content-center">
+    <img src="{{ song.imageUrl }}" alt="{{ song.name }}" />
+  </div>
+
+  <div>
+    <p>{{ song.artistName }}</p>
+  </div>
+
+  <div>
+    <p>{{ song.name }}</p>
+  </div>
+
+  <div class="content-center">
+    <button routerLink="/{{ song.id }}">
+      Discover
+    </button>
+  </div>
+</div>

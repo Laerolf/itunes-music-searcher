@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+
+    <div class="container" id="itunes-search">
+      <input
+        class="input-field"
+        [(ngModel)]="searchString"
+        (ngModelChange)="search($event)"
+        placeholder="Search..." />
+
+      <app-search-results
+        [searchKey]="searchString"
+        [searchResults]="searchResults"
+        [amountOfResults]="amountOfSearchResults"
+        [loading]="loading">
+      </app-search-results>
+    </div>
+
+  </div>
+</section>

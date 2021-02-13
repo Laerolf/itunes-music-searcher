@@ -1,0 +1,30 @@
+<section>
+  <div class="container">
+
+    <div *ngIf="!loading" class="container song-card">
+      <div class="song-card-header">
+        <img src="{{ selectedSong.imageUrl}}" alt="{{ selectedSong.artistName }} - {{selectedSong.name}}" />
+        <h2>
+          {{ selectedSong.artistName }} || {{ selectedSong.name }}
+        </h2>
+      </div>
+
+      <div class="song-card-content">
+        <audio preload="auto" src="{{ selectedSong.previewUrl }}" controls></audio>
+      </div>
+
+      <div class="song-card-footer">
+        <button routerLink="">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="container song-card">
+      <div class="song-card-content">
+        <p>Loading...</p>
+      </div>
+    </div>
+
+  </div>
+</section>

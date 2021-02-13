@@ -1,0 +1,28 @@
+.song-card {
+  width: 60rem;
+  justify-self: center;
+  border: solid gray 0.10rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+
+  &-header {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 1rem;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &-content {
+    padding: 1rem;
+    width: 20rem;
+  }
+
+  &-footer {
+    padding: 1rem;
+    width: 20rem;
+  }
+}
